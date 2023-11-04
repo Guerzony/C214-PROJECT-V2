@@ -1,4 +1,4 @@
-# TRABALHO FINAL DA DISCIPLINA DE ENGENHARIA DE SOFTWARE
+# TRABALHO FINAL DE ENGENHARIA DE SOFTWARE:
 Repositorio destinado a criação do projeto final de C214
 
 ## INTEGRANTES:
@@ -15,6 +15,8 @@ Repositorio destinado a criação do projeto final de C214
 
 ```npm test```
 
-## AUTOMATICAÇÃO DO PROJETO:    
+## USAMOS O CYPRESS COMO FRAMEWORK PARA AUTOMATIZAR TESTES:
+Para abrir o cypress, use o comando:
+```./node_modules/.bin/cypress open```
 
 
