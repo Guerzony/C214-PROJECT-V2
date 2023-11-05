@@ -16,7 +16,7 @@ Repositorio destinado a criação do projeto final de C214
 ### Testes:
 ```npm test```
 
-[![CI Class](https://github.com/NathanAtaliba/C214-PROJECT-V2/blob/main/.github/workflows/ci.yml/badge.svg)](https://github.com/NathanAtaliba/C214-PROJECT-V2/blob/main/.github/workflows/ci.yml)
+[![CI class](https://github.com/NathanAtaliba/C214-PROJECT-V2/blob/main/.github/workflows/ci.yml/badge.svg)](https://github.com/NathanAtaliba/C214-PROJECT-V2/blob/main/.github/workflows/ci.yml)
 
 ## USAMOS O CYPRESS COMO FRAMEWORK PARA AUTOMATIZAR TESTES:
 Para abrir o cypress, use o comando:
