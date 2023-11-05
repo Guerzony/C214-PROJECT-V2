@@ -39,8 +39,9 @@ describe('Testes das rotas de tasks:', function() {
     response.should.have.status(201);
     expect(newTarefa["title"]).to.eql(response.body["title"]);
     }catch(err) {
-    console.log("Erro: " + err);
-    id = response.body["_id"];
+      console.log("Erro: " + err);
+      id = response.body["_id"];
+
     }
   });
 
@@ -78,4 +79,5 @@ describe('Testes das rotas de tasks:', function() {
     console.log("Erro:" + error);
   }
 });
+
 });
