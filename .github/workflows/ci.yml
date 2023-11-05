@@ -21,8 +21,5 @@ jobs:
     - name: Instalar Dependencias
       run: npm install
 
-    - name : Colocar o servidor em execução
-      run: npm run server
-
     - name : Executar os testes
       run: npm test

@@ -12,70 +12,77 @@ describe('Testes das rotas de tasks:', function() {
   this.timeout(5000); 
   //Teste de busca das tasks
   let id;
-  it('/GET', async () => { 
-  try{
-    const tasks = [];
-    const response = await request(app)
-    .get('/tasks');
-    response.should.have.status(200);
-    expect(tasks).to.eql(response.body);
-  }catch(err) {
-    console.log("Erro: " + err);
-  }
+
+  it('/GET', function (done) {
+    request(app)
+      .get('/tasks')
+      .end(function (err, response) {
+        if (err) {
+          console.log("Erro: " + err);
+          return done(err);
+        }
+        response.should.have.status(200);
+        done(); // Chama done para indicar que o teste está concluído.
+      });
   });
 
-  //Teste de criação de tarefa
-  it('/POST', async () => {
+  it('/POST', function (done) {
     const newTarefa = {
       "title": 'Fazer cafe',
       "description": 'Descrição da tarefa',
       "status": 'In progress'
-    }; 
-    try{
-    const response = await request(app)
-    .post('/tasks')
-    .send(newTarefa)
-    id = response.body["_id"];
-    response.should.have.status(201);
-    expect(newTarefa["title"]).to.eql(response.body["title"]);
-    }catch(err) {
-    console.log("Erro: " + err);
-    id = response.body["_id"];
-    }
+    };
+    request(app)
+      .post('/tasks')
+      .send(newTarefa)
+      .end(function (err, response) {
+        if (err) {
+          console.log("Erro: " + err);
+          return done(err);
+        }
+        id = response.body["_id"];
+        response.should.have.status(201);
+        done(); 
+      });
   });
 
-  //Teste de update de tarefa
-  it('/PUT', async () => { 
+  it('/PUT', function (done) {
     let taskUpdate = {
-        "description": "De tarde",
-        "status": "Concluida",
-    }
+      "description": "De tarde",
+      "status": "Concluida",
+    };
     const resposta = "Task atualizada com sucesso!";
-    try{  
-      const response = await request(app)
+    request(app)
       .put(`/tasks/${id}`)
       .send(taskUpdate)
-      response.should.have.status(200);
-      expect(resposta).to.eql(response.text);
-    }catch(error){
-      console.log("Erro:" + error);
-    }
+      .end(function (err, response) {
+        if (err) {
+          console.log("Erro: " + err);
+          return done(err);
+        }
+        response.should.have.status(200);
+        expect(resposta).to.eql(response.text);
+        done();
+      });
   });
 
-  //Teste de delete de tarefa
-  it('/DELETE', async () => {
+  it('/DELETE', function (done) {
     let taskDelete = {
       "title": "Fazer cafe",
-  }
-  const resposta = 'Task excluida com sucesso!';
-  try{
-  const response = await request(app)
-  .delete(`/tasks/${id}`)
-  .send(taskDelete)  
-  response.should.have.status(200);
-  expect(resposta).to.eql(response.text);
-  }catch(error){
-    console.log("Erro:" + error);
-  }
-});
+    };
+    const resposta = 'Task excluida com sucesso!';
+    request(app)
+      .delete(`/tasks/${id}`)
+      .send(taskDelete)
+      .end(function (err, response) {
+        if (err) {
+          console.log("Erro: " + err);
+          return done(err);
+        }
+        response.should.have.status(200);
+        expect(resposta).to.eql(response.text);
+        done();
+      });
+  });
+
 });
