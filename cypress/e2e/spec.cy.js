@@ -6,14 +6,16 @@ describe('Testes automatizados com Cypress', () => {
     cy.get('#description').type('Fazer hoje')
     cy.get('#status').type('ToDo')
     cy.get('#buttonCreate').click()
-  })
-  
+    cy.wait(2000)
+    })
+    
   it('Teste criar task Completed', () => {
     cy.visit('http://localhost:5500/frontend/client.html')
     cy.get('#title').type('Arrumar porta')
     cy.get('#description').type('Fazer hoje')
     cy.get('#status').type('Completed')
     cy.get('#buttonCreate').click()
+    cy.wait(2000)
   })
 
   it('Teste criar task InProgress', () => {
@@ -22,6 +24,7 @@ describe('Testes automatizados com Cypress', () => {
     cy.get('#description').type('Fazer hoje')
     cy.get('#status').type('InProgress')
     cy.get('#buttonCreate').click()
+    cy.wait(2000)
   })
 
   it('Teste busca ', () => {
@@ -34,7 +37,6 @@ describe('Testes automatizados com Cypress', () => {
     cy.visit('http://localhost:5500/frontend/client.html')
     cy.get('#title').type('Arrumar porta')
     cy.get('#buttonDelete').click()
-    cy.wait(2000)
   })
 
   it('Teste Delete Arrumar cama', () => {
