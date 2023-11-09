@@ -89,7 +89,6 @@ async function createTask(){
           console.log('Resposta do servidor:', data);
           alert('Foi criado uma Task!');
           reset();
-          location.reload(); 
         })
         .catch((error) => {
           console.error('Erro na solicitação:', error.message);
