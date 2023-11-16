@@ -18,7 +18,6 @@ jobs:
       with:
           node-version: '14'
 
-jobs:
   test:
     - name: Instalar Dependencias
       run: npm install
