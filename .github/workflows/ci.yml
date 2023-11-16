@@ -23,7 +23,5 @@ jobs:
 
     - name : Executar os testes
       run: npm test
-      with:
-        server_address: mongodb://localhost:27017
-        server_port: 27017
+      
         

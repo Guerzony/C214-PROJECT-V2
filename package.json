@@ -11,9 +11,7 @@
     "nodemon": "^3.0.1"
   },
   "scripts": {
-    "server": "nodemon backend/src/index.js",
-    "test": "mocha backend/test/taskTests.js",
-    "client": "nodemon frontend/JS/client.js"
+    "test": "mocha backend/src/test/test.js"
   },
   "devDependencies": {
     "@types/mongoose": "^5.11.97",
