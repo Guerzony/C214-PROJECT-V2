@@ -19,6 +19,9 @@ jobs:
           node-version: '14'
 
   test:
+    runs-on: ubuntu-latest
+
+    steps:
     - name: Instalar Dependencias
       run: npm install
 
