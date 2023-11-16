@@ -18,12 +18,12 @@ jobs:
       with:
           node-version: '14'
 
+jobs:
+  test:
     - name: Instalar Dependencias
       run: npm install
 
     - name : Executar os testes
       run: npm test
-      with:
-        server_address: mongodb://localhost:27017
-        server_port: 27017
+      
         
