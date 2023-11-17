@@ -21,7 +21,7 @@ body{
     flex-direction: column;
     justify-content: center;
     width: 400px;
-    height: 300px;
+    height: 400px;
     border: 2px solid black;
     border-radius: 10px;
 }
@@ -39,4 +39,17 @@ body{
     color: black;
     cursor: pointer;
 
+}
+.container_reposta{
+    background-color: none;
+    width: 300px;
+    height: 100px;
+    color: white;
+    font-size: 1rem;
+}
+.resposta{
+    margin: 5px;
+}
+.mensagem{
+    margin: 5px;
 }

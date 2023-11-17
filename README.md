@@ -13,7 +13,8 @@ Repositorio destinado a criação do projeto final de C214
 
 ```npm run server```
 
-### Testes:
+## Testes: 
+
 ```npm test```
 
 [![CI class](https://github.com/NathanAtaliba/C214-PROJECT-V2/actions/workflows/ci.yml/badge.svg)](https://github.com/NathanAtaliba/C214-PROJECT-V2/actions/workflows/ci.yml)
@@ -22,9 +23,7 @@ Repositorio destinado a criação do projeto final de C214
 Para abrir o cypress, use o comando:
 ```./node_modules/.bin/cypress open```
 
-
-# Utilizando a aplicação
-A aplicação possui uma interface bem intuitiva, onde colocamos os valores de peso e altura e nos é entregue uma mensagem sobre a condição do indivíduo avaliado.
+###  Testes utilizando o framework Cypress ;
 
 - IMC MENOR QUE 18.5: RESULTADO: ABAIXO DO PESO MENSAGEM: "Baixo Peso."
 
@@ -38,6 +37,9 @@ A aplicação possui uma interface bem intuitiva, onde colocamos os valores de p
 
 - IMC ENTRE IGUAL OU MAIOR QUE 40: RESULTADO: OBESIDADE II MENSAGEM: "Obesidade grau III."
 
+# Utilizando a aplicação
+
+A aplicação possui uma interface bem intuitiva, onde colocamos os valores de peso e altura e nos é entregue uma mensagem sobre a condição do indivíduo avaliado.
 
 # Link Apresentação:
 
