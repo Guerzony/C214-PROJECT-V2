@@ -45,8 +45,6 @@ jobs:
     - name: Executar Testes Cypress
       run: npx cypress run --config baseUrl=http://localhost:8080/frontend/imc.html
 
-    - name: Instalar cypress-multi-reporters
-      run: npm install --save-dev cypress-multi-reporters
 
   relatorio:
     runs-on: ubuntu-latest
