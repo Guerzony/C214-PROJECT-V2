@@ -42,7 +42,7 @@ describe('Testes automatizados com Cypress', () => {
   })
 
 it('Teste IMC Obesidade grau III', () => {
-  cy.visit('http://localhost:5500/frontend/imc.html')
+  cy.visit('http://localhost:8080/frontend/imc.html')
   cy.get('#peso').type(140)
   cy.get('#altura').type(1.80)
   cy.get('#btn-calc').click()
