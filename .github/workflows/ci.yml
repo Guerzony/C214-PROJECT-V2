@@ -39,7 +39,7 @@ jobs:
 
     # Adicione um passo para iniciar o http-server em segundo plano
     - name: Iniciar http-server
-      run: http-server -p 8080 -d false &
+      run: http-server -p 5500 -d false &
 
     # Adicione um passo para esperar até que o servidor esteja pronto (opcional)
     - name: Esperar pelo http-server
