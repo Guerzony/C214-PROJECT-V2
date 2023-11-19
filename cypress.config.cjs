@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   reporter: 'cypress-multi-reporters', // Alterado para usar o cypress-multi-reporters
   reporterOptions: {
-    configFile: 'reporter-config.json'
+    configFile: path.resolve(__dirname, "reporter-config.json")
   },
   e2e: {
     setupNodeEvents(on, config) {
