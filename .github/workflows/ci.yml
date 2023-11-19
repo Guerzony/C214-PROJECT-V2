@@ -33,6 +33,9 @@ jobs:
     - name: Instalar Dependencias
       run: npm install
 
+    - name: Executar Testes
+      run: npm test
+
     - name: Instalar http-server
       run: npm install -g http-server
 
