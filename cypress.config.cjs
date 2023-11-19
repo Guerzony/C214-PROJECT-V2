@@ -1,5 +1,5 @@
 const { defineConfig } = require("cypress");
-
+const path = require("path");
 module.exports = defineConfig({
   reporter: 'cypress-multi-reporters', // Alterado para usar o cypress-multi-reporters
   reporterOptions: {
