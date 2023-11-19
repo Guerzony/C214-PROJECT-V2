@@ -39,7 +39,7 @@ jobs:
 
     # Adicione um passo para iniciar o http-server em segundo plano
     - name: Iniciar http-server
-      run: http-server -p 5500 -d false &
+      run: http-server -p 8080 -d false &
 
     # Adicione um passo para esperar até que o servidor esteja pronto (opcional)
     - name: Esperar pelo http-server
@@ -47,7 +47,7 @@ jobs:
 
     # Adicione um passo para executar os testes Cypress
     - name: Executar Testes Cypress
-      run: npx cypress run --config baseUrl=http://localhost:5500/frontend/imc.html
+      run: npx cypress run --config baseUrl=http://localhost:8080/frontend/imc.html
 
     - name: Instalar cypress-multi-reporters
       run: npm install --save-dev cypress-multi-reporters

@@ -2,7 +2,7 @@
     "reporterEnabled": "mochawesome",
     "mochawesomeReporterOptions": {
       "reportDir": "cypress/reports/html",
-      "overwrite": false,
+      "overwrite": true,
       "html": false
     }
   }
