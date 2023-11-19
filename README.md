@@ -20,7 +20,8 @@ Repositorio destinado a criação do projeto final de C214
 [![CI class](https://github.com/NathanAtaliba/C214-PROJECT-V2/actions/workflows/ci.yml/badge.svg)](https://github.com/NathanAtaliba/C214-PROJECT-V2/actions/workflows/ci.yml)
 
 ## USAMOS O CYPRESS COMO FRAMEWORK PARA AUTOMATIZAR TESTES:
-Para abrir o cypress, use o comando:
+
+```npm install --save-dev cypress-multi-reporters``` -> instala as dependencias de multi-relatorios
 
 ```npm i --save-dev cypress-mochawesome-reporter```-> instala as dependencias da geração de testes
 

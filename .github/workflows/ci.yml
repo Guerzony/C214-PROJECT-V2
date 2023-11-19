@@ -19,7 +19,6 @@ jobs:
           node-version: '14'
   
   test:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -34,7 +33,13 @@ jobs:
     - name: Instalar Dependencias
       run: npm install
 
-    - name : Executar os testes
-      run: npm test
-      
-        
+    - name: Instalar cypress-multi-reporters
+      run: npm install --save-dev cypress-multi-reporters
+
+    - name: Executar os testes e gerar relatórios
+      run: |
+        npm test
+        npx cypress run --reporter mochawesome --reporter-options configFile=cypress-configs/reporter-config.json
+
+    - name: Copiar relatórios para o diretório de artefatos
+      run: cp -r cypress/reports/* $GITHUB_WORKSPACE/artifacts
