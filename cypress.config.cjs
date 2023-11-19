@@ -10,6 +10,5 @@ module.exports = defineConfig({
       require('cypress-mochawesome-reporter/plugin')(on);
       // implement node event listeners here
     },
-    video: true,
   },
 });
