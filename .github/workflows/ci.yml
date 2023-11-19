@@ -33,6 +33,22 @@ jobs:
     - name: Instalar Dependencias
       run: npm install
 
+    # Adicione um passo para instalar o http-server globalmente
+    - name: Instalar http-server
+      run: npm install -g http-server
+
+    # Adicione um passo para iniciar o http-server em segundo plano
+    - name: Iniciar http-server
+      run: http-server -p 8080 -d false &
+
+    # Adicione um passo para esperar até que o servidor esteja pronto (opcional)
+    - name: Esperar pelo http-server
+      run: sleep 5
+
+    # Adicione um passo para executar os testes Cypress
+    - name: Executar Testes Cypress
+      run: npx cypress run --config baseUrl=http://localhost:8080/imc.html
+
     - name: Instalar cypress-multi-reporters
       run: npm install --save-dev cypress-multi-reporters
 
