@@ -1,7 +1,6 @@
 import { calcImc , nivel } from "../imc.js";
 import { expect } from "chai";
 
-
 describe('Testes do IMC : ', () => {
     
     it('Teste de calculo do IMC',() => {
