@@ -55,7 +55,7 @@ jobs:
     - name: Executar os testes e gerar relatórios
       run: |
         npm test
-        npx cypress run --reporter mochawesome --reporter-options configFile=cypress-configs/reporter-config.json
+        ./node_modules/.bin/cypress run --spec 'cypress/e2e/**/'
 
     - name: Copiar relatórios para o diretório de artefatos
       run: cp -r cypress/reports/* $GITHUB_WORKSPACE/artifacts
