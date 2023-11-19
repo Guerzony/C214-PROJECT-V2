@@ -19,7 +19,6 @@ jobs:
           node-version: '14'
   
   test:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -34,7 +33,50 @@ jobs:
     - name: Instalar Dependencias
       run: npm install
 
-    - name : Executar os testes
-      run: npm test
-      
-        
+    - name: Instalar http-server
+      run: npm install -g http-server
+
+    - name: Iniciar http-server
+      run: http-server -p 8080 -d false &
+
+    - name: Esperar pelo http-server
+      run: sleep 5
+
+    - name: Executar Testes Cypress
+      run: npx cypress run --config baseUrl=http://localhost:8080/frontend/imc.html
+
+    - name: Instalar cypress-multi-reporters
+      run: npm install --save-dev cypress-multi-reporters
+
+  relatorio:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Chekout do código
+      uses: actions/checkout@v2
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v2
+      with:
+          node-version: '14'
+
+    - name: Instalar Dependencias
+      run: npm install
+
+    - name: Instalar http-server
+      run: npm install -g http-server
+
+    - name: Iniciar http-server
+      run: http-server -p 8080 -d false &
+
+    - name: Esperar pelo http-server
+      run: sleep 5
+
+    - name: Executar os testes e gerar relatórios
+      run: ./node_modules/.bin/cypress run --spec 'cypress/e2e/**/'
+
+    - name: Copiar relatórios para o diretório de artefatos
+      run: cp -r cypress/reports/* $GITHUB_WORKSPACE/artifacts
+
+
+  
