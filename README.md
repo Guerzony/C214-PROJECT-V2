@@ -21,7 +21,13 @@ Repositorio destinado a criação do projeto final de C214
 
 ## USAMOS O CYPRESS COMO FRAMEWORK PARA AUTOMATIZAR TESTES:
 Para abrir o cypress, use o comando:
-```./node_modules/.bin/cypress open```
+
+```npm i --save-dev cypress-mochawesome-reporter```-> instala as dependencias da geração de testes
+
+```./node_modules/.bin/cypress open``` -> Abre o cypress para realizar os testes
+
+```./node_modules/.bin/cypress run --spec 'cypress/e2e/**/'```  -> Gera os relatorios de testes
+
 
 ###  Testes utilizando o framework Cypress ;
 
