@@ -13,15 +13,15 @@ Repositorio destinado a criação do projeto final de C214
 
 ```npm run server```
 
-## Testes: 
-
-```npm test```
+# TESTES
 
 [![CI class](https://github.com/NathanAtaliba/C214-PROJECT-V2/actions/workflows/ci.yml/badge.svg)](https://github.com/NathanAtaliba/C214-PROJECT-V2/actions/workflows/ci.yml)
 
-## USAMOS O CYPRESS COMO FRAMEWORK PARA AUTOMATIZAR TESTES:
+## TESTES NO BACK-END UTILIZANDO MOCHA: 
 
-```npm install --save-dev cypress-multi-reporters``` -> instala as dependencias de multi-relatorios
+```npm test```
+
+## USAMOS O CYPRESS COMO FRAMEWORK PARA AUTOMATIZAR TESTES E2E:
 
 ```npm i --save-dev cypress-mochawesome-reporter```-> instala as dependencias da geração de testes
 
