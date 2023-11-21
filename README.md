@@ -6,7 +6,7 @@ Repositorio destinado a criação do projeto final de C214
     - Gabriel Henrique Guerzony
 
 ## APLICAÇÃO DO PROJETO:
-    O projeto possui uma interface para adicionar, remover, editar e buscar tasks.
+    O projeto possui testes utilizando o cypress para testar a interação e2e com teste de interface e o mocha para testar a aplicação em testes unitarios.
 
 ## COMANDOS NECESSARIOS:
 ```npm install```
@@ -30,7 +30,7 @@ Repositorio destinado a criação do projeto final de C214
 ```./node_modules/.bin/cypress run --spec 'cypress/e2e/**/'```  -> Gera os relatorios de testes
 
 
-###  Testes utilizando o framework Cypress ;
+###  Testes utilizando o framework Cypress:
 
 - IMC MENOR QUE 18.5: RESULTADO: ABAIXO DO PESO MENSAGEM: "Baixo Peso."
 
