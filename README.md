@@ -17,7 +17,7 @@ Repositorio destinado a criação do projeto final de C214
 
 [![CI class](https://github.com/NathanAtaliba/C214-PROJECT-V2/actions/workflows/ci.yml/badge.svg)](https://github.com/NathanAtaliba/C214-PROJECT-V2/actions/workflows/ci.yml)
 
-## TESTES NO BACK-END UTILIZANDO MOCHA: 
+## TESTES UTILIZANDO MOCHA: 
 
 ```npm test```
 
