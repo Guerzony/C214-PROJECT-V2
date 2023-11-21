@@ -6,7 +6,7 @@ Repositorio destinado a criação do projeto final de C214
     - Gabriel Henrique Guerzony
 
 ## APLICAÇÃO DO PROJETO:
-    O projeto possui testes utilizando o cypress para testar a interação e2e com teste de interface, e o mocha para testar a aplicação em testes unitarios.
+    O projeto possui testes utilizando o cypress para testar a interação e2e com teste de interface e o mocha para testar a aplicação em testes unitarios.
 
 ## COMANDOS NECESSARIOS:
 ```npm install```
