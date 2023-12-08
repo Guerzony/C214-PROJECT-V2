@@ -17,6 +17,9 @@ jobs:
       uses: actions/setup-node@v2
       with:
           node-version: '14'
+
+    - name: Instalar Dependencias
+      run: npm install
   
   test:
     runs-on: ubuntu-latest
@@ -29,9 +32,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
           node-version: '14'
-
-    - name: Instalar Dependencias
-      run: npm install
 
     - name: Executar Testes
       run: npm test
@@ -60,9 +60,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
           node-version: '14'
-
-    - name: Instalar Dependencias
-      run: npm install
 
     - name: Instalar http-server
       run: npm install -g http-server
